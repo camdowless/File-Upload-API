@@ -1,0 +1,15 @@
+{
+  "version": 2,
+  "dgSpecHash": "F6EIxYoq91e5JxYtF0eU/z3yLvQpY/fYkd1xZPRLgdwaNc81sGZJBvJxbeciBsHeTNGMOE/PLHJkFJ7zDOM9EA==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\cameron.dowless\\Desktop\\File-Upload-API\\FileUploadAPI\\FileUploadAPI\\FileUploadAPI.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\cameron.dowless\\.nuget\\packages\\microsoft.extensions.apidescription.server\\3.0.0\\microsoft.extensions.apidescription.server.3.0.0.nupkg.sha512",
+    "C:\\Users\\cameron.dowless\\.nuget\\packages\\microsoft.openapi\\1.2.3\\microsoft.openapi.1.2.3.nupkg.sha512",
+    "C:\\Users\\cameron.dowless\\.nuget\\packages\\swashbuckle.aspnetcore\\5.6.3\\swashbuckle.aspnetcore.5.6.3.nupkg.sha512",
+    "C:\\Users\\cameron.dowless\\.nuget\\packages\\swashbuckle.aspnetcore.swagger\\5.6.3\\swashbuckle.aspnetcore.swagger.5.6.3.nupkg.sha512",
+    "C:\\Users\\cameron.dowless\\.nuget\\packages\\swashbuckle.aspnetcore.swaggergen\\5.6.3\\swashbuckle.aspnetcore.swaggergen.5.6.3.nupkg.sha512",
+    "C:\\Users\\cameron.dowless\\.nuget\\packages\\swashbuckle.aspnetcore.swaggerui\\5.6.3\\swashbuckle.aspnetcore.swaggerui.5.6.3.nupkg.sha512"
+  ],
+  "logs": []
+}
