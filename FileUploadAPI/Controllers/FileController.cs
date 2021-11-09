@@ -5,6 +5,7 @@ using Microsoft.Extensions.Logging;
 using System;
 using System.Collections.Generic;
 using System.IO;
+using System.Linq;
 using System.Net.Http.Headers;
 using System.Threading.Tasks;
 namespace BulkAPITest.Controllers
@@ -22,15 +23,16 @@ namespace BulkAPITest.Controllers
 
         [HttpPost, DisableRequestSizeLimit]
         [Route("Upload")]
-        public async Task<IActionResult> Upload()
+        public async Task<IActionResult> Upload(IList<IFormFile> files)
         {
+            var folderName = "Files";
             //List<SavedFile> created = new List<SavedFile>();
             try
             {
-                var formCollection = await Request.ReadFormAsync();
-                foreach (IFormFile file in formCollection.Files)
+                //var formCollection = await Request.ReadFormAsync();
+                foreach (IFormFile file in /*formCollection.Files*/ files)
                 {
-                    var folderName = "Files";
+                    
                     var directoryToSave = Path.Combine(Directory.GetCurrentDirectory(), folderName);
                     if (file.Length > 0)
                     {            
@@ -39,17 +41,20 @@ namespace BulkAPITest.Controllers
                       
                         var fullPath = Path.Combine(directoryToSave, fileName);
                         var dbPath = Path.Combine(folderName, fileName);
-
-                        byte[] bytes = FH.ReadFully(file.OpenReadStream());
+                        using (Stream fileStream = new FileStream(fullPath, FileMode.Create))
+                        {
+                            await file.CopyToAsync(fileStream);
+                        }
+                        /*byte[] bytes = FH.ReadFully(file.OpenReadStream());
                         Console.WriteLine(bytes.Length);
-                        //File.WriteAllBytes(bytes, fullPath);
+                        //SaveData(fullPath, bytes);
+                        //System.IO.File.WriteAllBytes(fullPath, bytes.ToArray());
 
                         using (var stream = new FileStream(fullPath, FileMode.Create))
                         {
                             file.CopyTo(stream);
                             
-                        }
-                        //return Ok(new { dbPath });
+                        }*/
                     }
                     else
                     {
@@ -63,6 +68,12 @@ namespace BulkAPITest.Controllers
             }
             return Ok();
         }
+        /*protected void SaveData(string path, byte[] data)
+        {
+            BinaryWriter Writer = new BinaryWriter(System.IO.File.Open(path, FileMode.Create));
+            
+            Writer.Write(data);
 
+        }*/
     }
 }

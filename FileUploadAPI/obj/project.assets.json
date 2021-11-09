@@ -200,11 +200,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\cameron.dowless\\Desktop\\File-Upload-API\\FileUploadAPI\\FileUploadAPI\\FileUploadAPI.csproj",
+      "projectUniqueName": "C:\\Users\\cameron.dowless\\Desktop\\File-Upload-API\\FileUploadAPI\\FileUploadAPI.csproj",
       "projectName": "FileUploadAPI",
-      "projectPath": "C:\\Users\\cameron.dowless\\Desktop\\File-Upload-API\\FileUploadAPI\\FileUploadAPI\\FileUploadAPI.csproj",
+      "projectPath": "C:\\Users\\cameron.dowless\\Desktop\\File-Upload-API\\FileUploadAPI\\FileUploadAPI.csproj",
       "packagesPath": "C:\\Users\\cameron.dowless\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\cameron.dowless\\Desktop\\File-Upload-API\\FileUploadAPI\\FileUploadAPI\\obj\\",
+      "outputPath": "C:\\Users\\cameron.dowless\\Desktop\\File-Upload-API\\FileUploadAPI\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\",
